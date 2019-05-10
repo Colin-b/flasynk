@@ -24,21 +24,21 @@ def _serialize(value):
     return value
 
 
-def async_result_stub(task_id, **kwargs):
-    return TaskResultStore.get_by_id(task_id)
+def _async_result_stub(task_id, **kwargs):
+    return _TaskResultStore.get_by_id(task_id)
 
 
 # apply_async returns an EagerResult in eager mode.
 # To ensure it always returns an EagerResult even when AsyncResult is called, we use this mock
-celery.result.AsyncResult = async_result_stub
+celery.result.AsyncResult = _async_result_stub
 
 
-class EagerResultWithStateSupport(celery.result.EagerResult):
+class _EagerResultWithStateSupport(celery.result.EagerResult):
     def ready(self):
         return self._state == states.READY_STATES
 
 
-class TaskResultStore:
+class _TaskResultStore:
 
     __task_store = {}
 
@@ -51,7 +51,7 @@ class TaskResultStore:
         return (
             cls.__task_store[id]
             if id in cls.__task_store
-            else EagerResultWithStateSupport(id, None, states.PENDING)
+            else _EagerResultWithStateSupport(id, None, states.PENDING)
         )
 
 
@@ -115,7 +115,7 @@ class CeleryMock:
                                 task_id, e, states.FAILURE
                             )
 
-                        TaskResultStore.put(celery_result)
+                        _TaskResultStore.put(celery_result)
                         return celery_result
 
                     def __call__(self, *args, **kwargs):
