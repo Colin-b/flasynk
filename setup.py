@@ -20,7 +20,7 @@ setup(
     ],
     extras_require={
         "celery": ["celery[redis,msgpack]==4.3.0"],
-        "huey": ["huey==2.0.1"],
+        "huey": ["huey==2.0.1", "redis==3.2.1"],
         "testing": [
             # Extra requirements
             "celery[redis,msgpack]==4.3.0",

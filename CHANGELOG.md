@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2019-05-14
+### Fixed
+- [Huey] Redis dependency was missing.
+
 ## [1.0.1] - 2019-05-10
 ### Changed
 - [Celery] Hide more mock methods.
@@ -14,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.0.1...HEAD
+[Unreleased]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.0.2...HEAD
+[1.0.2]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.tools.digital.engie.com/GEM-Py/flasynk/releases/tag/v1.0.0
