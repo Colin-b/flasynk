@@ -45,7 +45,7 @@ class CeleryMockTest(TestCase):
                 celery_result = celery.result.AsyncResult(
                     celery_task.id, app=celery_app
                 )
-            except:
+            except Exception:
                 raise Exception("This exception should not be raised")
             return celery_result.get(propagate=True)
 
