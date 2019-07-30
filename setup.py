@@ -16,17 +16,17 @@ setup(
         # Used to manage endpoints and open api definition
         "flask-restplus==0.12.1",
         # Used to ensure Black code style is checked on pre-commit
-        "pre-commit==1.16.1",
+        "pre-commit==1.17.0",
     ],
     extras_require={
         "celery": ["celery[redis,msgpack]==4.3.0"],
-        "huey": ["huey==2.0.1", "redis==3.2.1"],
+        "huey": ["huey==2.1.0", "redis==3.3.0"],
         "testing": [
             # Extra requirements
             "celery[redis,msgpack]==4.3.0",
-            "huey==2.0.1",
+            "huey==2.1.0",
             # Used to manage testing of a Flask application
-            "flask_testing==0.7.1",
+            "pytest-flask==0.15.0",
         ],
     },
     python_requires=">=3.6",

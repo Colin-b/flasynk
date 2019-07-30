@@ -190,7 +190,7 @@ def _module(async_app):
     try:
         import huey
 
-        if isinstance(async_app, huey.api.RedisHuey):
+        if isinstance(async_app, huey.api.Huey):
             import flasynk.huey_specifics
 
             return flasynk.huey_specifics
