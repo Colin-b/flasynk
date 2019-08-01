@@ -3,7 +3,7 @@ import logging
 import os
 
 import celery.result
-from celery import Celery
+from celery import Celery, current_task
 from celery.task import control
 
 logger = logging.getLogger("asynchronous_server")
@@ -128,3 +128,20 @@ def health_details():
                 }
             },
         )
+
+
+class CeleryTaskIdFilter(logging.Filter):
+    """
+    This is a logging filter that makes the celery task identifier available for use in the logging format.
+    This filter support lookup in celery context for the current task id
+    """
+
+    def filter(self, record):
+        record.celery_task_id = (
+            current_task.request.id
+            if current_task
+            # TODO Ensure that those checks really make sense
+            and hasattr(current_task, "request") and hasattr(current_task.request, "id")
+            else ""
+        )
+        return True
