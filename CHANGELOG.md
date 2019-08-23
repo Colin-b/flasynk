@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update redis to version 3.3.8
 - Remove pre-commit from dependencies and explain how to install the python module to contribute
 
+### Removed
+- huey mock (unused so this is not considered a breaking change)
+- fixture to mock celery (unused so this is not considered a breaking change)
+
 ## [1.2.0] - 2019-08-01
 ### Changed
 - Update redis to version 3.3.4

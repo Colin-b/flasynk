@@ -22,6 +22,7 @@ class UTCDateTimeMock:
 @pytest.fixture
 def app():
     application = Flask(__name__)
+    application.config["PROPAGATE_EXCEPTIONS"] = False
     application.testing = True
 
     api = Api(application)

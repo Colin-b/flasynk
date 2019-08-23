@@ -8,33 +8,13 @@
 <a href='https://pse.tools.digital.engie.com/drm-all.gem/job/team/view/Python%20modules/job/flasynk/job/master/lastSuccessfulBuild/testReport/'><img src='https://pse.tools.digital.engie.com/drm-all.gem/buildStatus/icon?job=team/flasynk/master&config=testCount'></a>
 </p>
 
-## Mocking Celery with pytest
+## Mocking Celery
 
-```python
-from flasynk.celery_mock import *
+To mock celery, the best is still to use the celery_mock.CeleryMock class.
 
-@pytest.fixture
-def celery_app_func():
-    return the_function_returning_the_celery_app
+## Mocking Huey
 
-
-def test_something(mock_celery):
-    pass
-```
-
-## Mocking Huey with pytest
-
-```python
-from flasynk.huey_mock import *
-
-@pytest.fixture
-def huey_app_func():
-    return the_function_returning_the_huey_app
-
-
-def test_something(mock_huey):
-    pass
-```
+To mock huey, the best is still to update the Huey application before starting the Flask app by setting immediate to True.
 
 ## How to install
 1. [python 3.7+](https://www.python.org/downloads/) must be installed
