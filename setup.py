@@ -14,17 +14,15 @@ setup(
     packages=find_packages(exclude=["test"]),
     install_requires=[
         # Used to manage endpoints and open api definition
-        "flask-restplus==0.12.1",
-        # Used to ensure Black code style is checked on pre-commit
-        "pre-commit==1.17.0",
+        "flask-restplus==0.13.0"
     ],
     extras_require={
         "celery": ["celery[redis,msgpack]==4.3.0"],
-        "huey": ["huey==2.1.0", "redis==3.3.4"],
+        "huey": ["huey==2.1.1", "redis==3.3.8"],
         "testing": [
             # Extra requirements
             "celery[redis,msgpack]==4.3.0",
-            "huey==2.1.0",
+            "huey==2.1.1",
             # Used to manage testing of a Flask application
             "pytest-flask==0.15.0",
         ],
