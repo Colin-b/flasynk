@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
-
 import datetime
 import logging
 import uuid
 
-import pytest
 import celery.result
 from celery import states
 
@@ -127,14 +124,3 @@ class CeleryMock:
             return task_interceptor
         else:
             return getattr(self.__celery_app, name)
-
-
-@pytest.fixture
-def mock_celery(celery_app_func):
-    def proxify(func):
-        def wrapper(*args, **kwargs):
-            return CeleryMock(func(*args, **kwargs))
-
-        return wrapper
-
-    return proxify(celery_app_func)
