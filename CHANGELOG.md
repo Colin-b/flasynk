@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2019-08-23
+### Changed
+- Update flask-restplus to version 0.13.0
+- Update huey to version 2.1.1
+- Update redis to version 3.3.8
+- Remove pre-commit from dependencies and explain how to install the python module to contribute
+
+### Removed
+- huey mock (unused so this is not considered a breaking change)
+- fixture to mock celery (unused so this is not considered a breaking change)
+
 ## [1.2.0] - 2019-08-01
 ### Changed
 - Update redis to version 3.3.4
@@ -35,7 +46,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.2.0...HEAD
+[Unreleased]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.3.0...HEAD
+[1.3.0]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.tools.digital.engie.com/GEM-Py/flasynk/compare/v1.0.1...v1.0.2
