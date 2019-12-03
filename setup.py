@@ -49,7 +49,7 @@ setup(
             "pytest-cov==2.*",
         ],
     },
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     project_urls={
         "GitHub": "https://github.com/Colin-b/flasynk",
         "Changelog": "https://github.com/Colin-b/flasynk/blob/master/CHANGELOG.md",
