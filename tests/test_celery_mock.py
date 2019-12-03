@@ -14,8 +14,8 @@ def app():
             "celery_server",
             broker="memory://localhost/",
             backend="memory://localhost/",
-            namespace="pycommon_test-test",
-            include="pycommon_test.test.test",
+            namespace="pycommon_test-tests",
+            include="pycommon_test.tests.tests",
         )
     )
 

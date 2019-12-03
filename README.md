@@ -1,11 +1,12 @@
 <h2 align="center">Exposing Asynchronous endpoint using Flask-RestPlus</h2>
 
 <p align="center">
-<a href='https://github.tools.digital.engie.com/gempy/flasynk/releases/latest'><img src='https://pse.tools.digital.engie.com/all/buildStatus/icon?job=team/flasynk/master&config=version'></a>
-<a href='https://pse.tools.digital.engie.com/all/job/team/view/Python%20modules/job/flasynk/job/master/'><img src='https://pse.tools.digital.engie.com/all/buildStatus/icon?job=team/flasynk/master'></a>
-<a href='https://pse.tools.digital.engie.com/all/job/team/view/Python%20modules/job/flasynk/job/master/cobertura/'><img src='https://pse.tools.digital.engie.com/all/buildStatus/icon?job=team/flasynk/master&config=testCoverage'></a>
+<a href="https://pypi.org/project/flasynk/"><img alt="pypi version" src="https://img.shields.io/pypi/v/flasynk"></a>
+<a href="https://travis-ci.org/Colin-b/flasynk"><img alt="Build status" src="https://api.travis-ci.org/Colin-b/flasynk.svg?branch=develop"></a>
+<a href="https://travis-ci.org/Colin-b/flasynk"><img alt="Coverage" src="https://img.shields.io/badge/coverage-100%25-brightgreen"></a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
-<a href='https://pse.tools.digital.engie.com/all/job/team/view/Python%20modules/job/flasynk/job/master/lastSuccessfulBuild/testReport/'><img src='https://pse.tools.digital.engie.com/all/buildStatus/icon?job=team/flasynk/master&config=testCount'></a>
+<a href="https://travis-ci.org/Colin-b/flasynk"><img alt="Number of tests" src="https://img.shields.io/badge/tests-0 passed-blue"></a>
+<a href="https://pypi.org/project/flasynk/"><img alt="Number of downloads" src="https://img.shields.io/pypi/dm/flasynk"></a>
 </p>
 
 ## Mocking Celery
@@ -20,5 +21,5 @@ To mock huey, the best is still to update the Huey application before starting t
 1. [python 3.6+](https://www.python.org/downloads/) must be installed
 2. Use pip to install module:
 ```sh
-python -m pip install flasynk -i https://all-team-remote:tBa%40W%29tvB%5E%3C%3B2Jm3@artifactory.tools.digital.engie.com/artifactory/api/pypi/all-team-pypi-prod/simple
+python -m pip install flasynk
 ```

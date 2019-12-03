@@ -6,7 +6,7 @@ from flask_restplus import Api, Resource, fields
 
 import flasynk
 import flasynk.huey_specifics
-from test.enhanced_flask_testing import assert_303_regex, assert_202_regex
+from tests.enhanced_flask_testing import assert_303_regex, assert_202_regex
 
 
 class CustomException(Exception):
@@ -14,7 +14,7 @@ class CustomException(Exception):
 
 
 flasynk.huey_specifics.imported_exceptions.append(
-    "from test.test_huey import CustomException"
+    "from tests.test_huey import CustomException"
 )
 
 
@@ -862,13 +862,13 @@ def test_async_call_with_modified_response(client):
 
 
 def test_async_call_with_path_parameters_and_modified_response(client):
-    response = client.get("/foo/path_parameters/test/2")
-    status_url = assert_202_regex(response, "/foo/path_parameters/test/2/status/.*")
+    response = client.get("/foo/path_parameters/tests/2")
+    status_url = assert_202_regex(response, "/foo/path_parameters/tests/2/status/.*")
     status_reply = client.get(status_url)
-    result_url = assert_303_regex(status_reply, "/foo/path_parameters/test/2/result/.*")
+    result_url = assert_303_regex(status_reply, "/foo/path_parameters/tests/2/result/.*")
     result_reply = client.get(result_url)
     assert result_reply.status_code == 200
-    assert result_reply.get_data(as_text=True) == "test: 6"
+    assert result_reply.get_data(as_text=True) == "tests: 6"
 
 
 def test_exception_raised_and_propagated(client):
